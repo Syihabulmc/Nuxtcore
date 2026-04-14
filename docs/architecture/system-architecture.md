@@ -1,6 +1,6 @@
 # System Architecture
 
-## 1. Gambaran Umum
+## 1. Gambaran Arsitektur
 
 Nuxtcore dirancang sebagai modular monolith berbasis Nuxt 4+ dan @nuxt/ui v4. Pendekatan ini cocok untuk starter enterprise karena:
 
@@ -73,7 +73,7 @@ Terdiri dari:
 
 ## 3. Alur Request
 
-Alur umum yang disarankan:
+Alur request yang direkomendasikan:
 
 1. User membuka halaman Nuxt.
 2. Middleware memeriksa autentikasi dan otorisasi.
@@ -84,7 +84,7 @@ Alur umum yang disarankan:
 7. Response dikembalikan dalam format standar.
 8. UI menampilkan hasil, error, atau notifikasi.
 
-## 4. Pola Fullstack yang Disarankan
+## 4. Pola Fullstack yang Direkomendasikan
 
 ### Opsi Utama
 
@@ -194,7 +194,7 @@ Simpan histori untuk:
 
 ## 11. Non-Functional Architecture Rules
 
-- Semua fitur inti harus dapat diuji.
+- Semua fitur inti harus memiliki test.
 - Semua modul baru harus punya owner domain.
 - Komponen UI reusable lebih diutamakan daripada duplikasi.
 - Helper global harus dibatasi agar tidak membuat ketergantungan liar.

@@ -4,7 +4,7 @@
 
 Dokumen ini menjelaskan fitur inti yang wajib ada pada Nuxtcore agar dapat menggantikan flow sistem lama tanpa mengurangi fungsi operasional utama.
 
-Urutan implementasi sebaiknya mengikuti prioritas bisnis, bukan sekadar kemudahan teknis.
+Urutan implementasi harus mengikuti prioritas bisnis, bukan sekadar kemudahan teknis.
 
 ## 2. Fitur Dasar Wajib
 
@@ -53,7 +53,7 @@ Rekomendasi:
 
 ## 3. Master Data
 
-Master data adalah fondasi modul lain. Contoh entitas:
+Master data adalah fondasi modul lain. Entitas referensi:
 
 - user
 - role
@@ -83,7 +83,7 @@ Rekomendasi:
 
 Jika sistem lama memiliki proses bisnis bertahap, maka Nuxtcore harus mengikuti urutan yang sama.
 
-Contoh pola umum:
+Pola status standar:
 
 - draft
 - submitted
@@ -115,7 +115,7 @@ Fungsi:
 - ringkasan
 - detail report
 - export
-- print-friendly view bila diperlukan
+- print-friendly view jika memang menjadi kebutuhan bisnis
 
 Rekomendasi:
 
@@ -174,7 +174,7 @@ Rekomendasi:
 Fungsi:
 
 - branding
-- parameter umum
+- parameter aplikasi
 - preferensi tampilan
 - konfigurasi teknis tertentu
 
@@ -188,7 +188,7 @@ Rekomendasi:
 Agar dashboard konsisten, gunakan pola berikut:
 
 - page header yang seragam
-- breadcrumb bila diperlukan
+- breadcrumb untuk halaman bertingkat
 - filter area di atas tabel
 - action button ditempatkan konsisten
 - form group yang jelas
@@ -209,7 +209,7 @@ Urutan yang disarankan:
 
 ## 12. Rekomendasi Fitur Tambahan
 
-Fitur berikut tidak wajib, tetapi sangat disarankan untuk versi enterprise:
+Fitur berikut opsional, tetapi direkomendasikan untuk versi enterprise:
 
 - dark mode
 - global search

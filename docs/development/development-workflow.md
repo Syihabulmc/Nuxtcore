@@ -8,7 +8,7 @@ Workflow ini dibuat agar tim dapat mengembangkan Nuxtcore secara konsisten, teta
 
 - Semua perubahan harus punya tujuan jelas.
 - Flow sistem lama tidak boleh berubah tanpa validasi.
-- Satu perubahan besar sebaiknya fokus pada satu domain.
+- Satu perubahan besar harus fokus pada satu domain.
 - Dokumentasi harus mengikuti perubahan kode.
 - Setiap modul baru harus memiliki definisi parity: mana yang harus sama persis, mana yang boleh di-upgrade.
 - Keputusan teknis penting harus tercatat sebelum implementasi meluas ke modul lain.
@@ -36,7 +36,7 @@ Sebelum coding:
 
 - implementasi per lapisan
 - mulai dari schema, service, lalu UI
-- gunakan komponen reusable jika memungkinkan
+- gunakan komponen reusable untuk pola yang berulang
 - jaga agar page hanya berisi orchestration, bukan bisnis logic inti
 
 ### 3.4 Verification
@@ -55,7 +55,7 @@ Sebelum coding:
 
 ## 4. Branching yang Disarankan
 
-Contoh sederhana:
+Baseline branching:
 
 - main: stabil
 - develop: integrasi aktif
@@ -74,7 +74,8 @@ Sebuah perubahan dianggap selesai jika:
 - permission sudah diuji
 - tidak ada error fatal
 - dokumentasi relevan diperbarui
-- review sudah dilakukan bila diperlukan
+- review sudah dilakukan jika relevan
+- docs sync checklist sudah dilewati
 
 ## 6. Konvensi Implementasi
 
@@ -93,7 +94,7 @@ Sebuah perubahan dianggap selesai jika:
 ### API
 
 - Response harus konsisten.
-- Error harus dapat dipahami.
+- Error harus jelas dan dapat ditindaklanjuti.
 - Endpoint harus diberi nama sesuai domain.
 - Gunakan server route sebagai boundary, bukan tempat menaruh seluruh logika bisnis.
 
@@ -146,8 +147,8 @@ Urutan yang paling aman:
 
 Jika terdapat perilaku lama yang tidak ideal tetapi sudah menjadi kebiasaan operasional, dokumentasikan sebagai:
 
-- retained legacy behavior
-- intentional improvement
+- parity exact
+- intentional upgrade
 - deprecated behavior
 
 Pembedaan ini membantu tim menjaga parity tanpa menutup ruang perbaikan.

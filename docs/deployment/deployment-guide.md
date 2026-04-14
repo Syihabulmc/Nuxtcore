@@ -2,14 +2,14 @@
 
 ## 1. Tujuan Deployment
 
-Panduan ini menjelaskan cara men-deploy Nuxtcore dengan aman, stabil, dan sesuai kebutuhan enterprise. Karena repository ini dirancang sebagai starter fullstack Nuxt, deployment dapat dilakukan untuk beberapa skenario:
+Panduan ini menjelaskan cara men-deploy Nuxtcore dengan aman, stabil, dan sesuai kebutuhan enterprise. Repository ini mendukung beberapa skenario deployment:
 
 - development lokal
 - staging
 - production internal
 - produksi dengan reverse proxy
 
-## 2. Prasyarat Umum
+## 2. Prasyarat
 
 - Node.js LTS
 - package manager yang digunakan tim
@@ -27,7 +27,7 @@ Panduan ini menjelaskan cara men-deploy Nuxtcore dengan aman, stabil, dan sesuai
 
 ### Staging
 
-- Mewakili production sedekat mungkin.
+- Merepresentasikan production sedekat mungkin.
 - Dipakai untuk validasi fitur sebelum rilis.
 - Harus menggunakan konfigurasi dan data yang aman.
 
@@ -39,7 +39,7 @@ Panduan ini menjelaskan cara men-deploy Nuxtcore dengan aman, stabil, dan sesuai
 
 ## 4. Variabel Environment
 
-Contoh kategori variabel yang biasanya dibutuhkan:
+Kategori variabel yang lazim dibutuhkan:
 
 - APP_NAME
 - APP_ENV
@@ -52,11 +52,11 @@ Contoh kategori variabel yang biasanya dibutuhkan:
 - LOG_LEVEL
 - SESSION_SECRET
 
-Catatan: nama variabel dapat disesuaikan dengan implementasi aktual.
+Catatan: nama variabel disesuaikan dengan implementasi aktual.
 
-## 5. Langkah Build Umum
+## 5. Langkah Build
 
-Langkah umum yang direkomendasikan:
+Urutan build yang direkomendasikan:
 
 1. Install dependencies.
 2. Pastikan environment variables tersedia.
@@ -69,7 +69,7 @@ Langkah umum yang direkomendasikan:
 
 Pendekatan ini cocok untuk server Linux standar.
 
-### Alur Umum
+### Alur Deployment
 
 - Aplikasi dijalankan sebagai Node process.
 - systemd menjaga proses tetap hidup.
@@ -92,7 +92,7 @@ Pendekatan ini cocok untuk server Linux standar.
 
 ## 7. Deployment dengan IIS
 
-Jika environment Windows mengharuskan IIS, gunakan IIS sebagai reverse proxy atau hosting layer yang sesuai dengan arsitektur server yang dipilih.
+Jika lingkungan Windows mensyaratkan IIS, gunakan IIS sebagai reverse proxy atau hosting layer yang sesuai dengan arsitektur server yang dipilih.
 
 ### Hal yang Perlu Diperhatikan
 
@@ -103,7 +103,7 @@ Jika environment Windows mengharuskan IIS, gunakan IIS sebagai reverse proxy ata
 
 ### Catatan
 
-Gunakan pendekatan IIS bila memang menjadi standar infrastruktur organisasi. Untuk deployment baru, Ubuntu dengan systemd atau container umumnya lebih sederhana untuk aplikasi Nuxt.
+Gunakan pendekatan IIS jika memang menjadi standar infrastruktur organisasi. Untuk deployment baru, Ubuntu dengan systemd atau container biasanya lebih sederhana untuk aplikasi Nuxt.
 
 ## 8. Rekomendasi Container
 
@@ -151,6 +151,6 @@ Minimal yang disarankan:
 ## 12. Rekomendasi Produksi
 
 - Gunakan staging sebelum production.
-- Aktifkan logging terpusat jika memungkinkan.
-- Gunakan health check endpoint bila diperlukan.
+- Aktifkan logging terpusat jika tersedia.
+- Gunakan health check endpoint jika tersedia.
 - Dokumentasikan prosedur restart dan rollback.

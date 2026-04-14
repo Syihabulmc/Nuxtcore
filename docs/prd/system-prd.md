@@ -45,7 +45,7 @@ Starter ini harus siap untuk:
 - validation
 - settings management
 - reporting
-- deployment production
+- deployment ke production
 
 ### 2.4 Dashboard Oriented
 
@@ -109,7 +109,7 @@ Perilaku sistem baru sama persis dengan sistem lama pada hasil, urutan proses, d
 
 ### 5.2 Parity Equivalent
 
-Implementasi berbeda, tetapi hasil operasional setara dan tidak mengubah kebiasaan user.
+Implementasi berbeda, tetapi hasil operasional setara dan tidak mengubah kebiasaan pengguna.
 
 ### 5.3 Intentional Upgrade
 
@@ -151,7 +151,7 @@ Sistem harus:
 
 ### 6.4 Master Data
 
-Sistem harus mendukung pola umum:
+Sistem harus mendukung pola CRUD standar berikut:
 
 - list
 - search
@@ -159,7 +159,7 @@ Sistem harus mendukung pola umum:
 - create
 - update
 - detail
-- delete atau soft delete bila diperlukan
+- delete atau soft delete sesuai kebijakan domain
 - pagination dan sorting untuk data besar
 
 ### 6.5 Workflow / Transaksi
@@ -188,7 +188,7 @@ Sistem harus:
 Sistem harus:
 
 - mengelola branding dan preferensi aplikasi
-- mengelola parameter umum
+- mengelola parameter aplikasi
 - memisahkan setting global dan setting domain bila perlu
 
 ### 6.8 File Upload
@@ -242,8 +242,8 @@ Sistem harus merekam aksi penting seperti:
 
 ### 7.5 Observability
 
-- error dan event penting harus dapat dilacak
-- perubahan status kritikal harus dapat diaudit
+- error dan event penting harus terlacak
+- perubahan status kritikal harus terdokumentasi dalam audit trail
 
 ## 8. Aturan Keputusan untuk Konflik Dokumen
 
@@ -264,7 +264,7 @@ Jika ada area yang masih ambigu, keputusan harus ditulis sebagai:
 
 Produk dianggap berhasil jika:
 
-- flow utama sistem lama dapat berjalan kembali
+- flow utama sistem lama dapat berjalan kembali dengan parity yang disepakati
 - user tidak perlu mengubah kebiasaan operasional secara besar
 - struktur kode mudah dirawat
 - modul baru tidak merusak modul existing

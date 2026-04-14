@@ -1,8 +1,6 @@
 # Nuxtcore
 
-Starter project enterprise fullstack berbasis Nuxt 4+ dengan @nuxt/ui v4 berbasis dashboard, dirancang untuk mempertahankan flow sistem lama semaksimal mungkin sambil menyiapkan fondasi yang lebih modular, aman, dan mudah dikembangkan.
-
-Dokumentasi ini disusun sebagai blueprint awal untuk membangun ulang sistem lama ke arsitektur Nuxt modern tanpa mengorbankan proses bisnis yang sudah berjalan.
+Nuxtcore adalah starter project enterprise fullstack berbasis Nuxt 4+ dan @nuxt/ui v4 untuk membangun ulang sistem lama tanpa mengubah flow bisnis inti. Dokumentasi ini menjadi blueprint implementasi yang memprioritaskan parity, modularity, dan clarity.
 
 ## Tujuan Proyek
 
@@ -102,7 +100,12 @@ Jika sebuah modul hanya berisi tampilan tipis, logic bisnis tetap harus dipindah
 - `docs/architecture/folder-structure.md` — struktur folder dan modul yang direkomendasikan
 - `docs/features/core-features.md` — panduan fitur inti dan flow utama
 - `docs/development/development-workflow.md` — workflow pengembangan tim
+- `docs/development/docs-sync-checklist.md` — checklist sinkronisasi docs
 - `docs/deployment/deployment-guide.md` — panduan deployment ke server
+- `docs/governance/docs-governance.md` — aturan ownership dan review docs
+- `docs/governance/docs-quality-gate.md` — quality gate dokumentasi
+- `docs/changelog/docs-changelog.md` — riwayat perubahan dokumentasi
+- `docs/templates/` — template reusable untuk dokumen baru
 
 ## Cara Memakai Repository Ini
 
@@ -137,4 +140,4 @@ Urutan yang disarankan untuk fase awal:
 
 ## Catatan Penting
 
-Dokumentasi ini sengaja dibuat generik namun enterprise-oriented agar dapat dipakai untuk banyak jenis sistem. Saat spesifikasi legacy sudah final, setiap modul dapat diisi ulang dengan flow yang lebih presisi tanpa mengubah prinsip arsitektur utamanya.
+Dokumentasi ini sengaja dibuat domain-agnostic namun enterprise-oriented agar bisa dipakai lintas industri. Saat spesifikasi legacy sudah final, setiap modul dapat diisi ulang dengan mapping yang lebih presisi tanpa mengubah prinsip arsitektur utamanya.

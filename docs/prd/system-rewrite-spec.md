@@ -19,7 +19,7 @@ Menerjemahkan sistem lama ke basis Nuxt 4+ tanpa mengubah parity bisnis inti.
 ### 2.2 Modernisasi Implementasi
 
 - UI dibangun sebagai dashboard berbasis Nuxt UI
-- logic dipisah ke layer yang jelas
+- logika dipisah ke layer yang jelas
 - validation, error handling, dan logging distandardisasi
 
 ### 2.3 Modularisasi per Domain
@@ -28,7 +28,7 @@ Menerjemahkan sistem lama ke basis Nuxt 4+ tanpa mengubah parity bisnis inti.
 - service, schema, route, page, dan komponen didekatkan secara logis
 - shared layer hanya untuk hal yang benar-benar lintas domain
 
-## 3. Cara Membaca Rewrite Spec
+## 3. Cara Menggunakan Rewrite Spec
 
 Gunakan dokumen ini untuk menjawab pertanyaan:
 
@@ -141,7 +141,7 @@ Perbaikan yang disengaja, misalnya:
 
 Jika legacy memakai urutan lain, legacy tetap menjadi sumber kebenaran.
 
-## 7. Risiko Umum dan Mitigasi
+## 7. Risiko Migrasi dan Mitigasi
 
 ### 7.1 Risiko
 

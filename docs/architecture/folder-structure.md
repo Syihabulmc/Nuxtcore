@@ -10,7 +10,7 @@ Struktur folder ini dirancang agar Nuxtcore tetap:
 - dekat dengan domain
 - mudah di-scale
 
-Struktur ini adalah rekomendasi awal. Penamaan dapat disesuaikan dengan kebutuhan tim, tetapi prinsip pemisahan tanggung jawab harus dipertahankan.
+Struktur ini adalah baseline awal. Penamaan boleh disesuaikan dengan kebutuhan tim, tetapi prinsip pemisahan tanggung jawab harus dipertahankan.
 
 ## 2. Struktur yang Direkomendasikan
 
@@ -99,7 +99,7 @@ Berisi entry point aplikasi dan lapisan presentasi Nuxt.
 
 ### 3.2 components/
 
-Berisi komponen reusable yang dapat dipakai lintas halaman.
+Berisi komponen reusable lintas halaman.
 
 Rekomendasi subfolder:
 
@@ -115,7 +115,7 @@ Jika komponen hanya dipakai satu modul, simpan di dalam folder modul tersebut. P
 
 Berisi reusable logic berbasis Composition API.
 
-Contoh:
+Referensi implementasi:
 
 - useApi untuk request standar.
 - usePermission untuk cek akses.
@@ -125,7 +125,7 @@ Contoh:
 
 Folder ini adalah inti modularisasi domain.
 
-Contoh domain:
+Domain awal:
 
 - auth
 - users
@@ -194,7 +194,7 @@ Untuk setiap domain utama, ikuti pola berikut:
 - Schema validasi domain disimpan bersama domainnya.
 - Permission domain dideklarasikan secara eksplisit.
 
-## 6. Contoh Struktur Domain
+## 6. Referensi Struktur Domain
 
 ```text
 modules/users/
@@ -236,6 +236,6 @@ Jika proyek masih kecil, cukup aktifkan bagian berikut terlebih dahulu:
 - shared/
 - docs/
 
-Folder lain seperti layers/ dan tests/ dapat bertambah saat kebutuhan muncul.
+Folder lain seperti layers/ dan tests/ ditambahkan saat kebutuhan konkret muncul.
 
 Untuk scaffold awal Nuxtcore, struktur minimum yang paling aman adalah: app/, server/, shared/, docs/, dan tests/.

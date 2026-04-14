@@ -1,3 +1,4 @@
+import { defineNuxtModule } from '@nuxt/kit'
 import type { EnterpriseModuleDefinition } from '@shared/types/module'
 
 export const authModule: EnterpriseModuleDefinition = {
@@ -6,3 +7,10 @@ export const authModule: EnterpriseModuleDefinition = {
   routeBase: '/auth',
   permissions: ['auth:read', 'auth:write']
 }
+
+export default defineNuxtModule({
+  meta: {
+    name: 'nuxtcore-auth'
+  },
+  setup() {}
+})

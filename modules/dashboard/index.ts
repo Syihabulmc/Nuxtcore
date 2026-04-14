@@ -1,3 +1,4 @@
+import { defineNuxtModule } from '@nuxt/kit'
 import type { EnterpriseModuleDefinition } from '@shared/types/module'
 
 export const dashboardModule: EnterpriseModuleDefinition = {
@@ -6,3 +7,10 @@ export const dashboardModule: EnterpriseModuleDefinition = {
   routeBase: '/dashboard',
   permissions: ['dashboard:read']
 }
+
+export default defineNuxtModule({
+  meta: {
+    name: 'nuxtcore-dashboard'
+  },
+  setup() {}
+})

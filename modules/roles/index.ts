@@ -1,3 +1,4 @@
+import { defineNuxtModule } from '@nuxt/kit'
 import type { EnterpriseModuleDefinition } from '@shared/types/module'
 
 export const rolesModule: EnterpriseModuleDefinition = {
@@ -6,3 +7,10 @@ export const rolesModule: EnterpriseModuleDefinition = {
   routeBase: '/dashboard/roles',
   permissions: ['roles:read', 'roles:write']
 }
+
+export default defineNuxtModule({
+  meta: {
+    name: 'nuxtcore-roles'
+  },
+  setup() {}
+})

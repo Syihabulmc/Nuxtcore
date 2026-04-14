@@ -3,11 +3,15 @@ withDefaults(
   defineProps<{
     title: string
     description?: string
+    to?: string
     icon?: string
+    actionsLabel?: string
   }>(),
   {
     description: '',
-    icon: 'i-lucide-inbox'
+    to: '',
+    icon: 'i-lucide-inbox',
+    actionsLabel: ''
   }
 )
 </script>
@@ -28,8 +32,12 @@ withDefaults(
         </p>
       </div>
 
-      <div v-if="$slots.actions" class="flex flex-wrap items-center justify-center gap-3">
-        <slot name="actions" />
+      <div v-if="$slots.actions || to" class="flex flex-wrap items-center justify-center gap-3">
+        <slot name="actions">
+          <UButton v-if="to" :to="to" variant="soft" color="neutral">
+            {{ actionsLabel || 'Continue' }}
+          </UButton>
+        </slot>
       </div>
     </div>
   </UCard>

@@ -20,7 +20,7 @@ export function createSchemaStub<T>(name: string): EnterpriseSchema<T> {
     validate(): SchemaResult<T> {
       return {
         success: false,
-        issues: [{ path: '', message: `${name} validation is not implemented yet` }]
+        issues: [{ path: '', message: `${name} validation is not configured yet` }]
       }
     }
   }

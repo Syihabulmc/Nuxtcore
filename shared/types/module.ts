@@ -3,4 +3,6 @@ export interface EnterpriseModuleDefinition {
   description: string
   routeBase: string
   permissions: readonly string[]
+  label?: string
+  icon?: string
 }

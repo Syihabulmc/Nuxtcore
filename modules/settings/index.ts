@@ -1,3 +1,4 @@
+import { defineNuxtModule } from '@nuxt/kit'
 import type { EnterpriseModuleDefinition } from '@shared/types/module'
 
 export const settingsModule: EnterpriseModuleDefinition = {
@@ -6,3 +7,10 @@ export const settingsModule: EnterpriseModuleDefinition = {
   routeBase: '/dashboard/settings',
   permissions: ['settings:read', 'settings:write']
 }
+
+export default defineNuxtModule({
+  meta: {
+    name: 'nuxtcore-settings'
+  },
+  setup() {}
+})

@@ -1,4 +1,5 @@
 import { resolve } from 'node:path'
+import { APP_DESCRIPTION, APP_NAME } from './shared/constants/app'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-04-14',
@@ -7,8 +8,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
-      appName: 'Nuxtcore',
-      appDescription: 'Parity-first fullstack enterprise starter',
+      appName: APP_NAME,
+      appDescription: APP_DESCRIPTION,
       environment: process.env.NODE_ENV ?? 'development'
     }
   },

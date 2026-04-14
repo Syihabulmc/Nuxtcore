@@ -1,14 +1,13 @@
+import { APP_DESCRIPTION, APP_NAME } from '@shared/constants/app'
+import { enterpriseSidebarNavigation } from '@shared/constants/modules'
+
 export default defineAppConfig({
   brand: {
-    name: 'Nuxtcore',
-    description: 'Fullstack enterprise Nuxt starter with parity-first structure',
+    name: APP_NAME,
+    description: APP_DESCRIPTION,
     tagline: 'Reusable, modular, dashboard-oriented'
   },
   navigation: {
-    sidebar: [
-      { label: 'Dashboard', to: '/dashboard', icon: 'i-lucide-layout-dashboard' },
-      { label: 'Users', to: '/dashboard/users', icon: 'i-lucide-users' },
-      { label: 'Settings', to: '/dashboard/settings', icon: 'i-lucide-settings' }
-    ]
+    sidebar: enterpriseSidebarNavigation
   }
 })

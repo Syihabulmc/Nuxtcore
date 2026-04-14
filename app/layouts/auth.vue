@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { APP_DESCRIPTION, APP_NAME } from '@shared/constants/app'
+import { computed } from 'vue'
 
 const config = useAppConfig() as {
   brand?: {
@@ -20,7 +21,7 @@ const brandDescription = computed(() => config.brand?.description ?? APP_DESCRIP
         <section class="space-y-6">
           <div class="space-y-3">
             <p class="text-sm font-medium uppercase tracking-[0.24em] text-primary-600 dark:text-primary-400">
-              Enterprise starter
+              Access layer
             </p>
             <h1 class="text-4xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
               {{ brandName }}
@@ -38,16 +39,7 @@ const brandDescription = computed(() => config.brand?.description ?? APP_DESCRIP
         </section>
 
         <div class="w-full">
-          <UCard class="border border-slate-200/70 shadow-2xl shadow-slate-900/5 dark:border-slate-800/80">
-            <template #header>
-              <div class="space-y-1">
-                <p class="text-sm font-medium text-primary-600 dark:text-primary-400">Nuxtcore scaffold</p>
-                <h2 class="text-xl font-semibold text-slate-900 dark:text-white">Starter entry point</h2>
-              </div>
-            </template>
-
-            <slot />
-          </UCard>
+          <slot />
         </div>
       </div>
     </div>
